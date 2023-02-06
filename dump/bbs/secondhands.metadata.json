@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"bbs.secondhands"}],"uuid":"8f2ad259028a401c8cdaa517fbf8828b"}

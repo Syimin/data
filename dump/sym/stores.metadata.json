@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"sym.stores"},{"v":{"$numberInt":"2"},"unique":true,"key":{"storename":{"$numberInt":"1"}},"name":"storename_1","ns":"sym.stores","background":true}],"uuid":"925f7de635a54aa3bfc8f0229d6dd7cb"}

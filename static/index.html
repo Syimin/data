@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <title>口袋嘉园</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/antd.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/foot.css">
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <!--新品首发-->
+<div>
+	<div class="div_middle div_title">
+		<div class="div_module_title_left">
+			<p class="text-left" style="font-size: 30px;">おすすめ新品
+				<small style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;トレンドアイテムを全てラインナップ♪</small>
+			</p>
+		</div>
+		<div class="div_module_title_right">
+			<a class="more_class" href="http://localhost:3000/commodities/" target="_blank">もっと見る></a>
+		</div>
+	</div>
+	<div id="myCarousel_new" class="carousel slide pad_010 b_k" data-ride="carousel">
+		<!-- 轮播（Carousel）指标 -->
+		<ol class="carousel-indicators" style="display: none;">
+			<li data-target="#myCarousel_new" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel_new" data-slide-to="1"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目左键 -->
+		<div class="div_new_product_left">
+			<a href="#myCarousel_new" data-slide="prev">
+				<img id="new_product_left" src="img/index/left_1-01.jpg">
+			</a>
+		</div>
+		<!-- 轮播（Carousel）项目 -->
+		<div class="carousel-inner bor_btm" style="float: left; width: 1090px;">
+			<div class="item active" style="height: 335px;">
+				<a id="new_product_01" href="http://localhost:3000/commodities/5f87e6860207831580837850" target="_blank">
+					<div class="div_new_product_margin">
+						<img id="new_product_img_01" width="100%" src="img/products/eb30.png">
+						<div class="new_product_name" id="new_product_name_01">
+							<h6 class="new_product_name_word_black">家でもオシャレ　キュートパジャマ</h6>
+							<h6 class="new_product_name_word_red">￥3,480円 </h6>
+						</div>
+					</div>
+				</a>
+				<a id="new_product_02" href="https://item.rakuten.co.jp/happymao10/10000013/" target="_blank">
+					<div class="div_new_product_margin">
+						<img id="new_product_img_02" width="100%" src="img/products/vh-wl.png">
+						<div class="new_product_name" id="new_product_name_02">
+							<h6 class="new_product_name_word_black">肌に優しい　カップルパジャマ</h6>
+							<h6 class="new_product_name_word_red">￥2,980円</h6>
+						</div>
+					</div>
+				</a>
+				<a id="new_product_03" href="https://item.rakuten.co.jp/happymao10/10000006/" target="_blank">
+					<div class="div_new_product_margin">
+						<img id="new_product_img_03" width="100%" src="img/products/3life-fan.jpg">
+						<div class="new_product_name" id="new_product_name_03">
+							<h6 class="new_product_name_word_black">ホームエステサロン　IPL光脱毛器</h6>
+							<h6 class="new_product_name_word_red">￥13,999円</h6>
+						</div>
+					</div>
+				</a>
+				<a id="new_product_04" href="https://item.rakuten.co.jp/happymao10/10000004/" target="_blank">
+					<div class="div_new_product">
+						<img id="new_product_img_04" width="100%" src="img/products/sl-a210.png">
+						<div class="new_product_name" id="new_product_name_04">
+							<h6 class="new_product_name_word_black">夏対策　ネッククーラー 小型</h6>
+							<h6 class="new_product_name_word_red">￥5,880円</h6>
+						</div>
+					</div>
+				</a>
+			</div>
+            </div>
+        </div>
+    </div>
+
+    <!--人气推荐-->
+    <div class="bg_gray" style="height: 700px;">
+        <div class="div_middle div_title">
+            <div class="div_module_title_left">
+                <p class="text-left" style="font-size: 30px;">おすすめ人気商品&nbsp;&nbsp;&nbsp;
+                    <span id="popularity_product" class="small_blue_word_border">&nbsp;売れ筋ランキング&nbsp;</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span id="shopkeeper" class="small_black_word">&nbsp;店長おすすめ&nbsp;</span>
+                </p>
+            </div>
+            <div class="div_module_title_right">
+                <a class="more_class" href="https://item.rakuten.co.jp/happymao10/c/0000000111/" target="_blank">もっと見る></a>
+            </div>
+        </div>
+    <!-- 人气排行 -->
+        <div id="popularity_product_01" class="div_middle">
+            <a href="https://item.rakuten.co.jp/happymao10/10000001/" target="_blank">
+                <div class="div_popularity_product_long">
+                    <img width="100%" src="img/products/jm-linen-1.png">
+                    <div class="popularity_product_name_long">
+                        <h6 class="small_black_word" style="font-size: 20px;">キュート ガーゼパジャマ</h6>
+                        <h6 class="new_product_name_word_red" style="font-size: 20px;">￥3,480円</h6>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="https://item.rakuten.co.jp/happymao10/10000006/" target="_blank">
+                <div class="div_popularity_product mar_right mar_bottom">
+                    <img height="200px" width="220px" src="img/products/jm-linen-3.png">
+                    <div class="popularity_product_name">
+                        <h6 class="small_black_word">IPL光脱毛器</h6>
+                        <h6 class="new_product_name_word_red">￥13,999円</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="https://item.rakuten.co.jp/happymao10/10000013/" target="_blank">
+                <div class="div_popularity_product mar_right mar_bottom">
+                    <img height="200px" width="220px" src="img/products/jm-linen-2.png">
+                    <div class="popularity_product_name">
+                        <h6 class="small_black_word">シンプルパジャマ</h6>
+                        <h6 class="new_product_name_word_red">￥2,980円</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="https://item.rakuten.co.jp/happymao10/10000029/" target="_blank">
+                <div class="div_popularity_product mar_bottom">
+                    <img height="200px" width="220px" src="img/products/jbam-1.jpg">
+                    <div class="popularity_product_name">
+                        <h6 class="small_black_word">ネックマッサージャー</h6>
+                        <h6 class="new_product_name_word_red">￥8,560円</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="https://item.rakuten.co.jp/happymao10/10000004/" target="_blank">
+                <div class="div_popularity_product mar_right">
+                    <img height="200px" width="220px" src="img/products/gm-pcbag.png">
+                    <div class="popularity_product_name">
+                        <h6 class="small_black_word">ネッククーラー 小型</h6>
+                        <h6 class="new_product_name_word_red">￥5,880円</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="https://item.rakuten.co.jp/happymao10/10000008/" target="_blank">
+                <div class="div_popularity_product mar_right">
+                    <img height="200px" width="220px" src="img/products/rs-w3.png">
+                    <div class="popularity_product_name">
+                        <h6 class="small_black_word">ネックマッサージャー</h6>
+                        <h6 class="new_product_name_word_red">￥6,280円</h6>
+                    </div>
+                </div>
+            </a>
+            <a href="https://item.rakuten.co.jp/happymao10/10000021/" target="_blank">
+                <div class="div_popularity_product">
+                    <img height="200px" width="220px" src="img/products/jbam-3.jpg">
+                    <div class="popularity_product_name">
+                        <h6 class="small_black_word">ネックマッサージャー</h6>
+                        <h6 class="new_product_name_word_red">￥10,980円</h6>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 店长推荐 -->
+	<div id="popularity_product_02" class="div_middle" style="display: none;">
+		<a href="https://item.rakuten.co.jp/happymao10/10000001/" target="_blank">
+			<div class="div_popularity_product_long">
+				<img width="100%" src="img/products/sl-a5p-1.png">
+				<div class="popularity_product_name_long">
+					<h6 class="small_black_word" style="font-size: 20px;">キュート ガーゼパジャマ</h6>
+					<h6 class="new_product_name_word_red" style="font-size: 20px;">￥3,480円</h6>
+				</div>
+			</div>
+		</a>
+		<a href="https://item.rakuten.co.jp/happymao10/10000006/" target="_blank">
+			<div class="div_popularity_product mar_right mar_bottom">
+				<img height="200px" width="220px" src="img/products/sl-a5p-2.png">
+				<div class="popularity_product_name">
+					<h6 class="small_black_word">IPL光脱毛器</h6>
+					<h6 class="new_product_name_word_red">￥13,999円</h6>
+				</div>
+			</div>
+		</a>
+		<a href="https://item.rakuten.co.jp/happymao10/10000013/" target="_blank">
+			<div class="div_popularity_product mar_right mar_bottom">
+				<img height="200px" width="220px" src="img/products/sl-a5p-3.png">
+				<div class="popularity_product_name">
+					<h6 class="small_black_word">シンプルパジャマ</h6>
+					<h6 class="new_product_name_word_red">￥2,980円</h6>
+				</div>
+			</div>
+		</a>
+		<a href="https://item.rakuten.co.jp/happymao10/10000029/" target="_blank">
+			<div class="div_popularity_product mar_bottom">
+				<img height="200px" width="220px" src="img/products/jbam-1.png">
+				<div class="popularity_product_name">
+					<h6 class="small_black_word">ネックマッサージャー</h6>
+					<h6 class="new_product_name_word_red">￥8,560円</h6>
+				</div>
+			</div>
+		</a>
+		<a href="https://item.rakuten.co.jp/happymao10/10000004/" target="_blank">
+			<div class="div_popularity_product mar_right">
+				<img height="200px" width="220px" src="img/products/sl-a210.jpg">
+				<div class="popularity_product_name">
+					<h6 class="small_black_word">ネッククーラー 小型</h6>
+					<h6 class="new_product_name_word_red">￥5,880円</h6>
+				</div>
+			</div>
+		</a>
+		<a href="https://item.rakuten.co.jp/happymao10/10000008/" target="_blank">
+			<div class="div_popularity_product mar_right">
+				<img height="200px" width="220px" src="img/products/airwheel-r6.jpg">
+				<div class="popularity_product_name">
+					<h6 class="small_black_word">ネックマッサージャー</h6>
+					<h6 class="new_product_name_word_red">￥6,280円</h6>
+				</div>
+			</div>
+		</a>
+		<a href="https://item.rakuten.co.jp/happymao10/10000021/" target="_blank">
+			<div class="div_popularity_product">
+				<img height="200px" width="220px" src="img/products/jbam-4.jpg">
+				<div class="popularity_product_name">
+					<h6 class="small_black_word">ネックマッサージャー</h6>
+					<h6 class="new_product_name_word_red">￥10,980円</h6>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+
+<!--スマートフォンアクセサリー-->
+<div class="div_middle">
+    <div class="div_title">
+        <div class="div_module_title_left">
+            <p class="text-left" style="font-size: 30px;">シンプルパジャマ</p>
+        </div>
+    </div>
+    <div class="div_middle" style="height: 665px;">
+       <a href="https://item.rakuten.co.jp/happymao10/10000001/" target="_blank">
+            <img class="mar_bottom" src="img/index/banner/banner-iqos-c.jpg">
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000001/" target="_blank">
+            <div class="div_general mar_right">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/case-i3p.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">家でもオシャレ　キュートパジャマ</h6>
+                    <h6 class="new_product_name_word_red">￥3,480円</h6>
+                </div>
+            </div>
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000013/" target="_blank">
+            <div class="div_general mar_right">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/b-lgm.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">肌に優しい　カップルパジャマ</h6>
+                    <h6 class="new_product_name_word_red">￥2,980円</h6>
+                </div>
+            </div>
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000014/" target="_blank">
+            <div class="div_general mar_right">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/bs-mfi.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">心地よく眠る　ルームウェア</h6>
+                    <h6 class="new_product_name_word_red">￥6,980円</h6>
+                </div>
+            </div>
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000001/" target="_blank">
+            <div class="div_general">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/solove-s3p.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">ふんわりタッチ　ガーゼパジャマ</h6>
+                    <h6 class="new_product_name_word_red">￥3,480円</h6>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<!--バッテリー・充電器-->
+<div class="div_middle">
+    <div class="div_title">
+        <div class="div_module_title_left">
+            <p class="text-left" style="font-size: 30px;">IPL光脱毛器</p>
+        </div>
+    </div>
+    <div class="div_middle" style="height: 300px;">
+       <a href="https://item.rakuten.co.jp/happymao10/10000007/" target="_blank">
+            <img class="mar_bottom" src="img/index/banner/banner-car-cup.jpg">
+        </a>
+    </div>
+</div>
+<!--日用品・生活雑貨-->
+<div class="div_middle">
+    <div class="div_title">
+        <div class="div_module_title_left">
+            <p class="text-left" style="font-size: 30px;">ネッククーラー</p>
+        </div>
+    </div>
+    <div class="div_middle" style="height: 665px;">
+        <a href="https://item.rakuten.co.jp/happymao10/10000004/" target="_blank">
+            <img class="mar_bottom" src="img/index/banner/banner-jm-xp.jpg">
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000004/" target="_blank">
+            <div class="div_general mar_right">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/spovan-sb.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">夏対策　ネッククーラー 小型</h6>
+                    <h6 class="new_product_name_word_red">￥5,880円</h6>
+                </div>
+            </div>
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000019/" target="_blank">
+            <div class="div_general mar_right">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/iw-b01.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">小型　携帯扇風機</h6>
+                    <h6 class="new_product_name_word_red">￥2,380円</h6>
+                </div>
+            </div>
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000008/" target="_blank">
+            <div class="div_general mar_right">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/fan-vh.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">楽しめる　ネックマッサージャー</h6>
+                    <h6 class="new_product_name_word_red">￥6,280円</h6>
+                </div>
+            </div>
+        </a>
+        <a href="https://item.rakuten.co.jp/happymao10/10000007/" target="_blank">
+            <div class="div_general">
+                <div class="div_general_img">
+                    <img class="general_img" src="img/products/iqos-jm.png">
+                </div>
+                <div class="general_name">
+                    <h6 class="small_black_word">ホームエステサロン　IPL光脱毛器</h6>
+                    <h6 class="new_product_name_word_red">￥13,999円</h6>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<!--精選品-->
+    <div class="bg_gray">
+        <div class="div_middle div_title">
+            <div class="div_module_title_left">
+                <p class="text-left" style="font-size: 30px;">精選品
+                    <small style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;あなたのために、暮らしキラめく良品を♡</small>
+                </p>
+            </div>
+        </div>
+        <div class="div_middle" style="height: 460px; padding-bottom: 80px;">
+            <div class="mar_right" style="width: 690px; height: 380px; float: left;">
+                <a href="#">
+                    <img style="width: 100%; height: 100%;" src="img/index/selections/Selections_01.jpg">
+                </a>
+            </div>
+            <div class="mar_bottom" style="width: 390px; height: 186px; float: left;">
+                <a href="#">
+                    <img style="width: 100%; height: 100%;" src="img/index/selections/Selections_02.jpg">
+                </a>
+            </div>
+            <div style="width: 390px; height: 186px; float: left;">
+                <a href="#">
+                    <img style="width: 100%; height: 100%;" src="img/index/selections/Selections_03.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="js/client.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript"></script>
+    </body>
+</html>

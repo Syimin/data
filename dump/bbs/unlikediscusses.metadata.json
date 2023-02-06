@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"bbs.unlikediscusses"}],"uuid":"5a5b5e9c8d7a4d6b971b87c9980b03d0"}

@@ -1,0 +1,149 @@
+import React,{useState,useEffect} from 'react'
+import {Form,Button,Modal} from 'react-bootstrap'
+import {EditFilled} from '@ant-design/icons';
+import {HOST,PORT,DOMAIN} from '../../config'
+
+const ModifyForm = (props)=>{
+    const {gid} = props//解构，将父组件did传给ModifyForm的子组件进行使用
+    const [settings,setSettings] = useState([])
+    const [title,setTitle] = useState([])
+    const [content,setContent] = useState([])
+    const [category,setCategory] = useState([])
+    const [motoprice,setMotoprice] = useState([])
+    const [price,setPrice] = useState([])
+    const [number,setNumber] = useState([])
+    const [pictures,setPictures] = useState([])
+    const loadGroupbuy = async ()=>{
+        try {
+            const res = await fetch(`${HOST}:${PORT}/api/groupbuys/${gid}`,{
+                method:"GET"
+            })
+            const result = await res.json()
+            if(res.ok){
+                setTitle(result.data.groupbuy.title)
+                setContent(result.data.groupbuy.content)
+                setCategory(result.data.groupbuy.category)
+                setMotoprice(result.data.groupbuy.motoprice)
+                setPrice(result.data.groupbuy.price)
+                setNumber(result.data.groupbuy.number)
+                setPictures(result.data.groupbuy.pictures)
+            }else{
+                alert(result.message)
+            }
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+    useEffect(()=>{
+        loadGroupbuy()
+    },[])
+    return(
+        <Form id="modifygForm">
+            <Form.Group controlId="title">
+                <Form.Label>标题</Form.Label>
+                <Form.Control type="text" placeholder="请输入团购标题" defaultValue={title}/>
+            </Form.Group>
+            <Form.Group controlId="content">
+                <Form.Label>内容</Form.Label>
+                <Form.Control as="textarea" rows="3" defaultValue={content}/>
+            </Form.Group>
+            <Form.Group controlId="category">
+                <Form.Label>类别</Form.Label>
+                <Form.Control type="text" placeholder="请输入团购类别" defaultValue={category}/>
+            </Form.Group>
+            <Form.Group controlId="motoprice">
+                <Form.Label>原价</Form.Label>
+                <Form.Control type="text" placeholder="请输入商品原价" defaultValue={motoprice}/>
+            </Form.Group>
+            <Form.Group controlId="price">
+                <Form.Label>团购价</Form.Label>
+                <Form.Control type="text" placeholder="请输入团购价格" defaultValue={price}/>
+            </Form.Group>
+            <Form.Group controlId="number">
+                <Form.Label>人数</Form.Label>
+                <Form.Control type="text" placeholder="请输入开团人数" defaultValue={number}/>
+            </Form.Group>
+            <Form.Group controlId="uploader">
+                <Form.Label>上传图片</Form.Label>
+                <img
+                    width={64}
+                    height={64}
+                    className="mr-3 img-thumbnail round"
+                    src={settings.pictures ? `/upload/${settings.pictures}` : '/img/avatar.jpg'}
+                    alt="团购图片"
+                />
+                <Form.Control type="file" placeholder="请上传图片" defaultValue={pictures}/>
+            </Form.Group>
+        </Form>
+    )
+}
+
+const ModifyGButton = (props)=>{
+    const {gid,loadGroupbuy} = props
+    const [show,setShow] = useState(false)//默认为关闭状态
+    const showModal = ()=> setShow(true)
+    const closeModal = ()=> setShow(false)
+    const modify = async (body)=>{
+        try {
+            const storage = await localStorage.getItem(DOMAIN)//从浏览器中获取用户名和token，拿到的storage是字符串格式
+            const {username,token} = JSON.parse(storage)//要解构就得先将storage的字符串格式转换成json格式
+            const {title,content,category,motoprice,price,number} = body
+            const formData = new FormData()//实例化声明formData
+            await formData.append('username',username)
+            await formData.append('token',token)
+            await formData.append('title',title)
+            await formData.append('content',content)
+            await formData.append('category',category)
+            await formData.append('motoprice',motoprice)
+            await formData.append('price',price)
+            await formData.append('number',number)
+            await formData.append('pictures',document.querySelector('#uploader').files[0])//files[0]表示获取第一个文件，即刚刚上传的头像
+            const res = await fetch(`${HOST}:${PORT}/api/groupbuys/${gid}`,{
+                method:"PATCH",
+                body:formData
+            })
+            const result = await res.json()
+            if(res.ok){
+                alert(result.message)
+                closeModal()
+                loadGroupbuy()
+            }else{
+                alert(result.message)
+            }
+        } catch (error) {
+            alert(error.message)
+        }
+    }
+    const handleModify = async ()=>{
+        const storage = await localStorage.getItem(DOMAIN)
+        const {username,token} = JSON.parse(storage)
+        const form = document.forms.modifygForm
+        const title = form.title.value
+        const content = form.content.value
+        const category = form.category.value
+        const motoprice = form.motoprice.value
+        const price = form.price.value
+        const number = form.number.value
+        const body = {username,token,title,content,category,motoprice,price,number}//用body将三个变量封装到body里，相当于请求体
+        modify(body)
+    }
+    return( 
+        <div>
+            <EditFilled style={{ fontSize: '26px'}} onClick={()=>showModal()}/>
+            <Modal show={show} onHide={()=>closeModal()}>
+                <Modal.Header closeButton>
+                    <Modal.Title>修改团购</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ModifyForm gid={gid}/>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={()=>closeModal()}>关闭</Button>
+                    <Button variant="primary" onClick={()=>handleModify()}>提交</Button>
+                </Modal.Footer>
+            </Modal>
+        </div>
+    )
+}
+
+export default ModifyGButton

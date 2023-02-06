@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"bbs.likediscusses"}],"uuid":"ef0495929d6d4be988fbd1bd1839e01a"}
